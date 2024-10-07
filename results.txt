@@ -1,0 +1,62 @@
+Pattern 1:
+
+Process 1 (PID: 19677) beginning
+Process 2 (PID: 19678) beginning
+Process 3 (PID: 19679) beginning
+Process 4 (PID: 19680) beginning
+Process 5 (PID: 19681) beginning
+Process 1 (PID: 19677) exiting
+Process 2 (PID: 19678) exiting
+Process 4 (PID: 19680) exiting
+Process 5 (PID: 19681) exiting
+Process 3 (PID: 19679) exiting
+Parent process waiting for Process 1 (PID: 19677)
+Parent process waiting for Process 2 (PID: 19678)
+Parent process waiting for Process 3 (PID: 19679)
+Parent process waiting for Process 4 (PID: 19680)
+Parent process waiting for Process 5 (PID: 19681)
+
+
+Pattern 2:
+
+Process 1 (PID: 19733) beginning
+Process 1 (PID: 19733) creating Process 2
+Process 1 (PID: 19733) exiting
+Parent process waiting for Process 1 (PID: 19733)
+Process 2 (PID: 19794) beginning
+Process 2 (PID: 19794) creating Process 3
+Process 2 (PID: 19794) exiting
+Parent process waiting for Process 2 (PID: 19794)
+Process 3 (PID: 19849) beginning
+Process 3 (PID: 19849) creating Process 4
+Process 3 (PID: 19849) exiting
+Parent process waiting for Process 3 (PID: 19849)
+Process 4 (PID: 19892) beginning
+Process 4 (PID: 19892) creating Process 5
+Process 4 (PID: 19892) exiting
+Parent process waiting for Process 4 (PID: 19892)
+Process 5 (PID: 19953) beginning
+Process 5 (PID: 19953) exiting
+Parent process waiting for Process 5 (PID: 19953)
+
+
+Pattern 3:
+
+Process 1 (PID: 20022) beginning
+Process 1 (PID: 20039) creating Process 2
+Process 2 (PID: 20039) beginning
+Process 1 (PID: 20040) creating Process 3
+Process 3 (PID: 20040) beginning
+Process 3 (PID: 20040) exiting
+Process 2 (PID: 20073) creating Process 4
+Process 4 (PID: 20073) beginning
+Process 2 (PID: 20074) creating Process 5
+Process 5 (PID: 20074) beginning
+Process 4 (PID: 20073) exiting
+Process 2 (PID: 20039) waited for left Process 4
+Process 5 (PID: 20074) exiting
+Process 2 (PID: 20039) waited for right Process 5
+Process 2 (PID: 20039) exiting
+Process 1 (PID: 20022) waited for left Process 2
+Process 1 (PID: 20022) waited for right Process 3
+Process 1 (PID: 20022) exiting
